@@ -1,0 +1,96 @@
+/* Page background */
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Board container */
+.board-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+}
+
+/* Score box */
+.score-box {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  color: #333;
+  font-weight: bold;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Tile styles with colors */
+.tile-0 {
+  background-color: #cdc1b4;
+  color: transparent;
+}
+.tile-2 {
+  background: linear-gradient(135deg, #fefcea, #f1da36);
+  color: #776e65;
+}
+.tile-4 {
+  background: linear-gradient(135deg, #fceabb, #f8b500);
+  color: #776e65;
+}
+.tile-8 {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: white;
+}
+.tile-16 {
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  color: white;
+}
+.tile-32 {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: white;
+}
+.tile-64 {
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+  color: white;
+}
+.tile-128 {
+  background: linear-gradient(135deg, #fccb90, #d57eeb);
+  color: white;
+  font-size: 2rem;
+}
+.tile-256 {
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+  color: white;
+  font-size: 2rem;
+}
+.tile-512 {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  color: white;
+  font-size: 2rem;
+}
+.tile-1024 {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  font-size: 1.75rem;
+}
+.tile-2048 {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  color: white;
+  font-size: 1.75rem;
+}
+.tile-super {
+  background: linear-gradient(135deg, #f00000, #dc281e);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
