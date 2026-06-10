@@ -10,7 +10,7 @@ export async function PUT(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-  const data = await req.json();
+    const data = await req.json();
     const { id } = await params;
     const updatedAppointment = await prisma.appointment.update({
       where: { id: Number(id) },

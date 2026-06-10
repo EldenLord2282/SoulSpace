@@ -22,12 +22,17 @@ export default function BookAppointmentPage() {
         body: JSON.stringify({ name, email, date, time, concern }),
       });
 
-      if (!res.ok) throw new Error("Request failed");
+      const resData = await res.json();
+
+      if (!res.ok) {
+        throw new Error(resData.error || resData.details || "Request failed");
+      }
 
       setMessage("✅ Booking Request Sent!");
       setName(""); setEmail(""); setDate(""); setTime(""); setConcern("");
-    } catch {
-      setMessage("❌ Something went wrong!");
+    } catch (error: any) {
+      console.error("Booking error:", error);
+      setMessage(`❌ ${error.message || "Something went wrong!"}`);
     } finally {
       setLoading(false);
     }
